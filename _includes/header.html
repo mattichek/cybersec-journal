@@ -1,0 +1,16 @@
+<header class="site-header">
+  <div class="termbar">
+    <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span class="termbar__title">{{ site.terminal_title }} — zsh</span>
+    <span class="termbar__meta">tydz. {{ site.data.progress.current_week }}</span>
+  </div>
+  <nav class="site-nav" aria-label="Główna nawigacja">
+    <a class="brand" href="{{ '/' | relative_url }}"><span class="prompt">$</span>&nbsp;{{ site.title }}</a>
+    <div class="nav-links">
+      <a href="{{ '/' | relative_url }}">log</a>
+      <a href="{{ '/progress/' | relative_url }}">postęp</a>
+      <a href="{{ '/about/' | relative_url }}">whoami</a>
+      <a href="{{ site.github_url }}" target="_blank" rel="noopener">github&nbsp;↗</a>
+    </div>
+  </nav>
+</header>

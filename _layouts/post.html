@@ -1,0 +1,33 @@
+---
+layout: default
+---
+<article class="post">
+  <p class="post__back"><a href="{{ '/' | relative_url }}">← log</a></p>
+  <header class="post__header">
+    <div class="post__meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y-%m-%d" }}</time>
+      {% if page.week %}<span class="post__week">tydzień {{ page.week }}</span>{% endif %}
+      {% if page.phase %}<span class="post__phase">{{ page.phase }}</span>{% endif %}
+    </div>
+    <h1 class="post__title">{{ page.title }}</h1>
+  </header>
+
+  {% if page.skills %}
+  <div class="unlocked">
+    <p class="unlocked__label"><span class="prompt">›</span> umiejętności odblokowane:</p>
+    <ul class="unlocked__list">
+      {% for s in page.skills %}<li>[+] {{ s }}</li>{% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
+  <div class="post__body">
+    {{ content }}
+  </div>
+
+  {% if page.tags and page.tags.size > 0 %}
+  <footer class="post__tags">
+    {% for t in page.tags %}<span class="tag">#{{ t }}</span>{% endfor %}
+  </footer>
+  {% endif %}
+</article>

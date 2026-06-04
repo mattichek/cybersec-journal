@@ -1,0 +1,57 @@
+---
+layout: default
+---
+<section class="hero">
+  <p class="hero__line"><span class="prompt">$</span> whoami</p>
+  <h1 class="hero__title">{{ site.author }}<span class="cursor">_</span></h1>
+  <p class="hero__sub">{{ site.description }}</p>
+  <div class="hero__status">
+    <span class="chip">{{ site.data.progress.phase }}</span>
+    <span class="chip chip--accent">tydzień {{ site.data.progress.current_week }} / 78</span>
+  </div>
+</section>
+
+<section class="panel">
+  <h2 class="panel__title"><span class="prompt">$</span> cat progress.txt</h2>
+  <div class="bars">
+    {% for m in site.data.progress.metrics %}
+    {% assign pct = m.current | times: 100 | divided_by: m.target %}
+    <div class="bar">
+      <div class="bar__head">
+        <span class="bar__name">{{ m.name }}</span>
+        <span class="bar__val">{{ m.current }}/{{ m.target }}</span>
+      </div>
+      <div class="bar__track"><div class="bar__fill" style="width: {{ pct }}%"></div></div>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="certs">
+    {% for c in site.data.progress.certs %}
+    <span class="cert cert--{{ c.status }}">
+      {% if c.status == 'done' %}[x]{% elsif c.status == 'in-progress' %}[~]{% else %}[ ]{% endif %} {{ c.name }}
+    </span>
+    {% endfor %}
+  </div>
+  <p class="panel__more"><a href="{{ '/progress/' | relative_url }}">› pełny tracker postępów</a></p>
+</section>
+
+<section class="log">
+  <h2 class="panel__title"><span class="prompt">$</span> ls -lt log/</h2>
+  <ul class="entries">
+    {% for post in site.posts %}
+    <li class="entry">
+      <a class="entry__link" href="{{ post.url | relative_url }}">
+        <time class="entry__date">{{ post.date | date: "%Y-%m-%d" }}</time>
+        {% if post.week %}<span class="entry__week">W{{ post.week }}</span>{% endif %}
+        <span class="entry__title">{{ post.title }}</span>
+      </a>
+      {% if post.skills %}
+      <span class="entry__skills">
+        {% for s in post.skills limit:3 %}<span class="skill">+{{ s }}</span>{% endfor %}
+        {% if post.skills.size > 3 %}<span class="skill skill--more">+{{ post.skills.size | minus: 3 }} więcej</span>{% endif %}
+      </span>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</section>

@@ -1,0 +1,41 @@
+# ── Konfiguracja strony ─────────────────────────────────────────────
+
+title: "cybersec-journal"
+tagline: "dziennik zdobywanych umiejętności"
+
+description: "Publiczny dziennik nauki red teamingu i analizy malware — od .NET dev do Pentester / Red Team Operator."
+
+author: "mattichek"
+
+# GitHub Pages dla repo cybersec-journal
+url: "https://mattichek.github.io"
+baseurl: "/cybersec-journal"
+
+github_user: "mattichek"
+github_url: "https://github.com/mattichek"
+
+terminal_title: "~/cybersec-journal"
+
+# ── Jekyll ──────────────────────────────────────────────────────────
+
+markdown: kramdown
+permalink: /log/:year-:month-:day-:title/
+timezone: Europe/Warsaw
+lang: pl
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'pl' }}">
+{% include head.html %}
+<body>
+  <div class="crt" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  {% include header.html %}
+  <main class="wrap main">
+    {{ content }}
+  </main>
+  {% include footer.html %}
+</body>
+</html>

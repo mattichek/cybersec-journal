@@ -1,0 +1,31 @@
+# ── Tracker postępów ────────────────────────────────────────────────
+# Edytuj te liczby w miarę postępów — strona zaktualizuje się sama.
+
+current_week: 1
+phase: "Faza 1 — Fundamenty"
+
+# Mierniki z planu (current = stan obecny, target = cel na 18 mies.)
+metrics:
+  - name: "Maszyny zrootowane (THM/HTB)"
+    current: 0
+    target: 100
+  - name: "Writeupy / analizy publiczne"
+    current: 0
+    target: 12
+  - name: "Analizy malware"
+    current: 0
+    target: 10
+  - name: "Projekty w portfolio"
+    current: 0
+    target: 6
+
+# Status certyfikatów: planned | in-progress | done
+certs:
+  - name: "eJPT / PJPT"
+    status: planned
+  - name: "PNPT"
+    status: planned
+  - name: "OSCP / OSCP+"
+    status: planned
+  - name: "CRTO"
+    status: planned
