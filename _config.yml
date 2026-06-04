@@ -8,8 +8,8 @@ description: "Publiczny dziennik nauki red teamingu i analizy malware — od .NE
 author: "mattichek"
 
 # GitHub Pages dla repo cybersec-journal
-url: "https://mattichek.github.io"
-baseurl: "/cybersec-journal"
+url: "https://gekowraith.pl"
+baseurl: ""
 
 github_user: "mattichek"
 github_url: "https://github.com/mattichek"
