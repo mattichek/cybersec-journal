@@ -5,7 +5,7 @@ tagline: "dziennik zdobywanych umiejętności"
 
 description: "Publiczny dziennik nauki red teamingu i analizy malware — od .NET dev do Pentester / Red Team Operator."
 
-author: "mattichek"
+author: "Mateusz Zaskórski"
 
 # GitHub Pages dla repo cybersec-journal
 url: "https://gekowraith.pl"
@@ -13,6 +13,7 @@ baseurl: ""
 
 github_user: "mattichek"
 github_url: "https://github.com/mattichek"
+linkedin_url: "https://www.linkedin.com/in/gekowraith/"
 
 terminal_title: "~/cybersec-journal"
 

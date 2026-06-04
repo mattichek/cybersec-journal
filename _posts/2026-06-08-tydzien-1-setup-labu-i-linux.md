@@ -1,6 +1,6 @@
 ---
 title: "Tydzień 1 — setup labu i fundamenty Linuksa"
-date: 2026-06-08
+date: 2026-06-02
 week: 1
 phase: "Faza 1 — Fundamenty"
 skills:
@@ -31,6 +31,4 @@ find / -perm -4000 -type f 2>/dev/null
 
 Muszę popracować na `awk`/`sed` — na razie kopiuję z notatek. W przyszłym tygodniu: scripting w bashu + sieci od strony ataku.
 
----
-
-> **To jest też szablon wpisu.** Skopiuj ten plik do `_posts/`, zmień nazwę na `RRRR-MM-DD-tytul.md`, podmień front-matter (szczególnie `skills:`) i treść.
+<!-- SZABLON: Skopiuj ten plik do _posts/, zmień nazwę na RRRR-MM-DD-tydzien-N-tytul.md, podmień front-matter (szczególnie skills:, week:, date:) i treść. -->

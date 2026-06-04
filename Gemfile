@@ -1,15 +1,17 @@
 source "https://rubygems.org"
 
-# Używamy gema github-pages, żeby lokalnie mieć dokładnie to samo
-# środowisko, co buduje GitHub Pages (te same wersje Jekylla i wtyczek).
-gem "github-pages", group: :jekyll_plugins
+gem "jekyll", "~> 4.3"
+gem "liquid", ">= 4.0.4"
 
-# Wtyczki używane przez stronę
 group :jekyll_plugins do
   gem "jekyll-feed"
   gem "jekyll-seo-tag"
 end
 
-# Windows / WSL — zwykle potrzebne:
-gem "tzinfo-data", platforms: [:mingw, :x64_mingw, :mswin, :jruby]
-gem "wdm", "~> 0.1.1", platforms: [:mingw, :x64_mingw, :mswin]
+# Ruby 3.4+ — wypadły z default gems
+gem "csv"
+gem "base64"
+gem "bigdecimal"
+
+# Windows
+gem "tzinfo-data", platforms: [:windows, :jruby]

@@ -113,15 +113,15 @@ body {
 
 /* ---------- log entries ---------- */
 .entries { list-style: none; margin: 0; padding: 0; }
-.entry { border-bottom: 1px solid var(--border); padding: .95rem 0; }
-.entry__link { display: flex; align-items: baseline; gap: .8rem; text-decoration: none; color: var(--fg); flex-wrap: wrap; }
+.entry { border-bottom: 1px solid var(--border); padding: 1rem 0; }
+.entry__header { display: flex; align-items: center; gap: .6rem; margin-bottom: .25rem; }
 .entry__date { color: var(--dim); font-size: .8rem; font-variant-numeric: tabular-nums; }
-.entry__week { color: var(--bg); background: var(--accent-dim); color: var(--accent); border: 1px solid var(--accent-dim); font-size: .7rem; padding: .05rem .4rem; border-radius: 2px; }
-.entry__title { font-weight: 500; }
-.entry__link:hover .entry__title { color: var(--accent); }
-.entry__skills { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .45rem; }
-.skill { font-size: .72rem; color: var(--green); }
-.skill--more { color: var(--dim); }
+.entry__week { color: var(--accent); border: 1px solid var(--accent-dim); font-size: .7rem; padding: .05rem .4rem; border-radius: 2px; }
+.entry__link { text-decoration: none; color: var(--fg); font-weight: 500; font-size: .95rem; }
+.entry__link:hover { color: var(--accent); }
+.entry__skills { list-style: none; margin: .5rem 0 0; padding: 0; }
+.entry__skills .skill { display: block; width: 100%; font-size: .8rem; color: var(--green); line-height: 1.5; margin-bottom: .2rem; }
+.entry__skills .skill::before { content: "› "; color: var(--accent-dim); }
 
 /* ---------- post / page ---------- */
 .post__back { font-size: .85rem; margin: 0 0 1.4rem; }

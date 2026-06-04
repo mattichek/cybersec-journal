@@ -22,4 +22,4 @@ Programista **.NET / C#** (fullstack, 1–3 lata) na drodze do roli **Pentester 
 
 Bo regularne, jawne dokumentowanie postępów uczy szybciej i jednocześnie buduje portfolio. Każdy wpis to mały dowód umiejętności — wart często więcej niż sam certyfikat.
 
-> Kontakt / profile: [GitHub]({{ site.github_url }}) · (dodaj LinkedIn / X)
+Kontakt / profile: [GitHub]({{ site.github_url }}) · [LinkedIn]({{ site.linkedin_url }})

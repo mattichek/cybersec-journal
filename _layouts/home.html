@@ -40,16 +40,17 @@ layout: default
   <ul class="entries">
     {% for post in site.posts %}
     <li class="entry">
-      <a class="entry__link" href="{{ post.url | relative_url }}">
+      <div class="entry__header">
         <time class="entry__date">{{ post.date | date: "%Y-%m-%d" }}</time>
         {% if post.week %}<span class="entry__week">W{{ post.week }}</span>{% endif %}
-        <span class="entry__title">{{ post.title }}</span>
-      </a>
+      </div>
+      <a class="entry__link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
       {% if post.skills %}
-      <span class="entry__skills">
-        {% for s in post.skills limit:3 %}<span class="skill">+{{ s }}</span>{% endfor %}
-        {% if post.skills.size > 3 %}<span class="skill skill--more">+{{ post.skills.size | minus: 3 }} więcej</span>{% endif %}
-      </span>
+      <ul class="entry__skills">
+        {% for s in post.skills %}
+          <li class="skill">{{ s }}</li>
+        {% endfor %}
+      </ul>
       {% endif %}
     </li>
     {% endfor %}

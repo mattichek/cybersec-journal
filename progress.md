@@ -39,4 +39,4 @@ permalink: /progress/
 | 3 — Projekty + OSCP | 27–52 | **OSCP**, tooling C#, portfolio malware |
 | 4 — Zaawansowane | 53–78 | **CRTO**, threat intel, wejście na rynek |
 
-> Edytuj liczby w pliku `_data/progress.yml` — paski i statusy zaktualizują się automatycznie po `git push`.
+<!-- Edytuj liczby w pliku _data/progress.yml — paski i statusy zaktualizują się automatycznie po git push. -->
